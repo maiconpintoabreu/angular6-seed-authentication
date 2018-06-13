@@ -1,0 +1,13 @@
+<div class="col-md-4 col-md-offset-4">
+    <form ng-submit="loginSubmit()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" class="form-control" [(ngModel)]="login.username" placeholder="Username: admin">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="username" class="form-control" [(ngModel)]="login.password" placeholder="Password: admin">
+        </div>
+        <button (click)="loginSubmit()" class="btn btn-default">Login</button>
+    </form>
+</div>
