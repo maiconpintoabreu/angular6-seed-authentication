@@ -13,6 +13,7 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { UserService } from './services/user.service';
 import { AuthInterceptor } from './auth-interceptor';
+import { NewuserComponent } from './newuser/newuser.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AuthInterceptor } from './auth-interceptor';
     LoginComponent,
     HomeComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    NewuserComponent
   ],
   imports: [
     BrowserModule,

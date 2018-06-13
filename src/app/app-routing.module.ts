@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth-guard.service';
+import { NewuserComponent } from './newuser/newuser.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -21,7 +22,8 @@ const adminRoutes: Routes = [
       {
         path: '',
         children: [
-          { path: '', component: UserComponent }
+          { path: '', component: UserComponent },
+          { path: 'new', component: NewuserComponent }
         ]
       }
     ]
