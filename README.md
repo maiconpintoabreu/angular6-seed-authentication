@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.org/maiconpintoabreu/angular6-seed-authentication.svg?branch=master)](https://travis-ci.org/maiconpintoabreu/angular6-seed-authentication)
 # Angularseed6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
