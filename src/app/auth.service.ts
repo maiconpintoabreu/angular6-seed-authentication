@@ -28,6 +28,7 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
     this.isLoggedIn = false;
+    this.loginRedirect();
   }
   getToken(): Token {
     return JSON.parse(localStorage.getItem('token'));
