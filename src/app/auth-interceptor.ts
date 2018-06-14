@@ -15,11 +15,10 @@ export class AuthInterceptor implements HttpInterceptor {
                 }
             }),
             catchError((error: any) => {
-                console.log(error);
                 if (error instanceof HttpErrorResponse) {
                     //status === 0 to fix cors issue
                     if (error.status === 401 || error.status === 0) {
-                        this.auth.loginRedirect();
+                        this.auth.logout();
                         return throwError(error);
                     }
                 }

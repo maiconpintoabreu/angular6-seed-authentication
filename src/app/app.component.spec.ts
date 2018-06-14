@@ -6,14 +6,6 @@ import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterLinkDirectiveStub } from '../testing';
 
-@Component({selector: 'app-banner', template: ''})
-class BannerStubComponent {}
-
-@Component({selector: 'router-outlet', template: ''})
-class RouterOutletStubComponent { }
-
-@Component({selector: 'app-welcome', template: ''})
-class WelcomeStubComponent {}
 
 let comp:    AppComponent;
 let fixture: ComponentFixture<AppComponent>;
@@ -24,7 +16,6 @@ describe('AppComponent & NO_ERRORS_SCHEMA', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        BannerStubComponent,
         RouterLinkDirectiveStub
       ],
       schemas: [ NO_ERRORS_SCHEMA ]

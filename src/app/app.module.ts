@@ -4,7 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from "./app.routing.module";
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
@@ -13,7 +13,8 @@ import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
 import { UserService } from './services/user.service';
 import { AuthInterceptor } from './auth-interceptor';
-import { NewuserComponent } from './newuser/newuser.component';
+import { NewuserComponent } from './user/newuser/newuser.component';
+import { DetailuserComponent } from './user/detailuser/detailuser.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewuserComponent } from './newuser/newuser.component';
     HomeComponent,
     AdminComponent,
     UserComponent,
-    NewuserComponent
+    NewuserComponent,
+    DetailuserComponent
   ],
   imports: [
     BrowserModule,

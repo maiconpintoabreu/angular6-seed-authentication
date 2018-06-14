@@ -1,19 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth-guard.service';
-import { NewuserComponent } from './newuser/newuser.component';
-const routes: Routes = [
+import { NewuserComponent } from './user/newuser/newuser.component';
+import { DetailuserComponent } from './user/detailuser/detailuser.component';
+export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   
 ];
-const adminRoutes: Routes = [
+export const adminRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
@@ -23,20 +22,11 @@ const adminRoutes: Routes = [
         path: '',
         children: [
           { path: '', component: UserComponent },
-          { path: 'new', component: NewuserComponent }
+          { path: 'new', component: NewuserComponent },
+          { path: 'detail/:id', component: DetailuserComponent }
         ]
       }
     ]
   }
 ];
-@NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes),
-    RouterModule.forChild(adminRoutes)
-  ],
-  exports: [ RouterModule ],
-  declarations: [
-  ]
-})
-export class AppRoutingModule { }
+

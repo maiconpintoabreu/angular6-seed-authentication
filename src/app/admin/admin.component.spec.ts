@@ -70,8 +70,6 @@ function tests() {
     const link = routerLinks[1];
 
     expect(link.navigatedTo).toBeNull('should not have navigated yet');
-    let token = {"access_token":"2e3ee407-6797-412e-83f6-4e16fb512a49","token_type":"bearer","refresh_token":"e054a164-af98-4cc9-91cc-ba41a0d70a60","expires_in":9893,"scope":"read write openid"};
-    localStorage.setItem('token',JSON.stringify(token));
     linkDe.triggerEventHandler('click', "./new");
     fixture.detectChanges();
 

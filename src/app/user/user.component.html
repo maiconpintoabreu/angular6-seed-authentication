@@ -5,14 +5,21 @@
       <th>Name</th>
       <th>Username</th>
       <th>Roles</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of users" [routerLink]="['./detail', user.id]">
       <th scope="row">{{ user.id }}</th>
       <td>{{ user.name }}</td>
       <td>{{ user.userName }}</td>
       <td>{{ user.roles }}</td>
+      <td>
+        <a 
+          (click)="deleteUser(user.id);$event.stopPropagation()">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>
